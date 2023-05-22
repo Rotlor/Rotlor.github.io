@@ -1,16 +1,36 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
-    <style>
-    </style>
-</head>
-<body>
-    <model-viewer src="assets/Flag.glb" camera-controls></model-viewer>
-</body>
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="rakovina5.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+      <button class="Hotspot" slot="hotspot-2" data-position="-0.07643742072733595m 1.5005548487706721m 0.0641641442552161m" data-normal="0.03789271111149847m 0.9992799121912851m -0.0019492397487994627m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Crane</div>
+      </button><button class="Hotspot" slot="hotspot-3" data-position="0.5655750676983358m 1.2957710027694698m 0.1478651694561266m" data-normal="0m 1m 0m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Sink</div>
+      </button><button class="Hotspot" slot="hotspot-4" data-position="0.5985310077667236m 0.6288042145504966m 0.03288883802097209m" data-normal="1m 0m 0m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Additional cabinets</div>
+      </button><button class="Hotspot" slot="hotspot-5" data-position="-0.07012430388600865m 1.2229888667474056m 0.060919468664351495m" data-normal="0.2039011459200774m 0.9770854071088182m 0.06106087051028801m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Drain-overflow</div>
+      </button>
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+  </body>
 </html>
